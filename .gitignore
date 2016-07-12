@@ -13,3 +13,7 @@ buildNumber.properties
 .project
 
 .settings/
+
+.idea/
+
+training.iml
