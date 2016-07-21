@@ -5,8 +5,21 @@
     <classes>
       <class name="ru.stqa.selenium.LoginTest"/>
       <class name="ru.stqa.selenium.AddMovieTest1"/>
+      <class name="ru.stqa.selenium.Logout"/>
+    </classes>
+  </test>
+  <test name="Test2">
+    <classes>
+      <class name="ru.stqa.selenium.LoginTest"/>
       <class name="ru.stqa.selenium.AddMovieTest2"/>
+      <class name="ru.stqa.selenium.Logout"/>
+    </classes>
+  </test>
+  <test name="Test3">
+    <classes>
+      <class name="ru.stqa.selenium.LoginTest"/>
       <class name="ru.stqa.selenium.DeleteMovieTest"/>
+      <class name="ru.stqa.selenium.Logout"/>
     </classes>
   </test>
 </suite>

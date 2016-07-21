@@ -12,6 +12,7 @@ public class DeleteMovieTest extends TestNgTestBase {
 
     @Test
     public void deleteMovie() {
+        driver.get(baseUrl + "/php4dvd/#!/sort/name%20asc/");
         WebDriverWait wait = new WebDriverWait(driver, 2);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("results")));
         Integer resultsCounter = driver.findElement(By.id("results")).findElements(By.tagName("a")).size();
