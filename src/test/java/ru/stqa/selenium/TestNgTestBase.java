@@ -2,12 +2,12 @@ package ru.stqa.selenium;
 
 import java.io.IOException;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.Capabilities;
 
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 
 import ru.stqa.selenium.factory.WebDriverFactory;
 import ru.stqa.selenium.factory.WebDriverFactoryMode;
@@ -45,4 +45,21 @@ public class TestNgTestBase {
   public void tearDown() {
     WebDriverFactory.dismissAll();
   }
+
+  public void login() {
+    driver.get(baseUrl + "/php4dvd/");
+    driver.findElement(By.id("username")).clear();
+    driver.findElement(By.id("username")).sendKeys("admin");
+    driver.findElement(By.name("password")).clear();
+    driver.findElement(By.name("password")).sendKeys("admin");
+    driver.findElement(By.name("submit")).click();
+  }
+
+  public void logout() {
+    driver.findElement(By.partialLinkText("Log out")).click();
+    Alert exitConfirmation = driver.switchTo().alert();
+    exitConfirmation.accept();
+  }
+
 }
+
