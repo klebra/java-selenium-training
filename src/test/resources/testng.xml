@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Tests" verbose="5" preserve-order="true">
-  <test name="Test1">
+<!--  <test name="Test1">
     <classes>
       <class name="ru.stqa.selenium.AddMovieTest1"/>
     </classes>
@@ -15,8 +15,8 @@
     <classes>
       <class name="ru.stqa.selenium.DeleteMovieTest"/>
     </classes>
-  </test>
-<!--  <test name="Test4">
+  </test>-->
+  <test name="Test4">
     <classes>
       <class name="ru.stqa.selenium.SearchFound"/>
     </classes>
@@ -25,5 +25,5 @@
     <classes>
       <class name="ru.stqa.selenium.SearchNotFound"/>
     </classes>
-  </test>-->
+  </test>
 </suite>

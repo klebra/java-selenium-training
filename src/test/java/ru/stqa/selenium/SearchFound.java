@@ -11,6 +11,7 @@ public class SearchFound extends TestNgTestBase {
 
     @Test
     public void searchFoundTest() {
+        login();
         driver.get(baseUrl + "/php4dvd/#!/sort/name%20asc/");
         driver.findElement(By.id("q")).clear();
         driver.findElement(By.id("q")).sendKeys("Some"); // используется именно это сочетание т.к. в тесте AddMovieTest1 добавляются фильмы с названием "Some movie"
@@ -18,5 +19,6 @@ public class SearchFound extends TestNgTestBase {
         WebDriverWait wait = new WebDriverWait(driver, 2);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("results")));
         Assert.assertTrue(driver.findElement(By.id("results")).findElements(By.tagName("a")).size() > 0);
+        logout();
     }
 }
