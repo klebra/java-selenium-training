@@ -26,9 +26,9 @@ public abstract class Page {
     wait= new WebDriverWait(driver, 10); 
 	}
 
-/*	public WebDriver getWebDriver() {
+	public WebDriver getWebDriver() {
 		return driver;
-	}*/
+	}
 
 	public String getTitle() {
 		return driver.getTitle();
